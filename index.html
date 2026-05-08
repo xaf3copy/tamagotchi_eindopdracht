@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/tama_norm.png" type="image/x-icon">
+  <title>TAMAGOTCHI</title>
+</head>
+<body>
+<!--mametchi sprites van de tamagotchi wikipedia pagina https://tamagotchi.fandom.com/wiki/Mimitchi/Sprite_Gallery-->
+<h1>Ik ben <span id="naam">TAMAGOTCHI</span>!</h1>
+<img id="tamagotchi" src="img/tama_norm.png" alt="tamagotchi sprite">
+<p>Zorg voor mij!</p>
+
+<input type="text" id="naamInput" placeholder="Verzin een naam!">
+<button id="enterKnop">Enter</button>
+
+  <!--code voor health bars, deels gemaakt met hulp van de lesopdrachten-->
+  <div class="meters">
+    <div>
+      <label for="honger">Honger:</label>
+      <meter id="honger" min="0" max="10" low="3" high="6" value="5" optimum="8"></meter>
+    </div>
+
+    <div>
+      <label for="verveling">Verveling:</label>
+      <meter id="verveling" min="0" max="10" low="3" high="6" value="5" optimum="8"></meter>
+    </div>
+
+    <div>
+      <label for="energie">Energie:</label>
+      <meter id="energie" min="0" max="10" low="3" high="6" optimum="8" value="8"></meter>
+    </div>
+  </div>
+  <!--buttons-->
+  <button id="eten">Eten</button>
+  <button id="spelen">Spelen</button>
+  <button id="slapen">Slapen</button>
+  <button id="reset">Reset</button>
+
+  <!--audio van de game Sonic 1 https://www.youtube.com/watch?v=l_Uo0VJihCU-->
+  <audio id="gameoverAudio" src="sfx/gameover_audio.mp3"></audio>
+  <script src="scripts/script.js" defer></script>
+</body>
+</html>
